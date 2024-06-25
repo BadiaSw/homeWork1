@@ -18,8 +18,23 @@ public class Main {
             scanner.nextLine();
             switch (choice){
                 case 1:
+                    AddStudent();
+                 break;
+                case 2:
+                    DisplayAllStudents();
+                    break;
+                case 3 :
+                    CalculateStudentAverage();
+                    break;
+                case 4 :
+                    FindTopStudent();
+                    break;
+                case 5:
+                    System.out.println("Exiting the program Goodbye!");
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
             }
-
         }
 
 
