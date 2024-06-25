@@ -1,9 +1,6 @@
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static Scanner scanner; // Note: Do not change this line.
@@ -49,7 +46,22 @@ public class Main {
         System.out.println("4. Find top performing student");
         System.out.println("5. Exit");
     }
-    private static void AddStudent() {}
+    private static void AddStudent() {
+        if(students.size()>=MAX_STUDENTS){
+            System.out.println("Student limit reached");
+            return;
+        }
+        System.out.println("Enter student name: ");
+        String studentName=scanner.nextLine();
+        System.out.println("Enter student grades: ");
+        String[] studentGrades=scanner.nextLine().split(" ");
+        List<Double> grades=new ArrayList<>();
+
+
+
+
+
+    }
     //-------------------------------------------------------------------------
     private static void DisplayAllStudents(){}
     //-------------------------------------------------------------------------
