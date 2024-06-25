@@ -5,8 +5,12 @@ import java.util.*;
 public class Main {
     public static Scanner scanner; // Note: Do not change this line.
     static final int MAX_STUDENTS=100;
-    static Map<String, List<Double>> students=new HashMap<>();
+    static Map<String, ArrayList<Double>> students;
+
     public static void manageGrades() {
+         students=new HashMap<>();
+
+
         System.out.println("Welcome to the Students Grade Management System!");
         while (true){
             PrintMenu();
@@ -55,7 +59,19 @@ public class Main {
         String studentName=scanner.nextLine();
         System.out.println("Enter student grades: ");
         String[] studentGrades=scanner.nextLine().split(" ");
-        List<Double> grades=new ArrayList<>();
+        ArrayList<Double> grades=new ArrayList<>();
+        for(String grade:studentGrades){
+            double gradeValue=Double.parseDouble(grade);
+            if(gradeValue<0||gradeValue>100){
+                System.out.println("Invalid grades");
+                return;
+
+            }
+            grades.add(gradeValue);
+            students.put(studentName,grades);
+            System.out.println("Student "+studentName+"added successfully!");
+
+        }
 
 
 
