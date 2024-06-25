@@ -40,7 +40,7 @@ public class Main {
     //-------------------------------------------------------------------------
     private static void CalculateStudentAverage(){}
     //-------------------------------------------------------------------------
-
+    private static void FindTopStudent(){}
     public static void main(String[] args) throws IOException {
         String path = args[0];
         scanner = new Scanner(new File(path));
