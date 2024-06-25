@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -14,7 +15,10 @@ public class Main {
             PrintMenu();
             System.out.println("Please enter your choice: ");
             int choice=scanner.nextInt();
-            
+            scanner.nextLine();
+            switch (choice){
+                case 1:
+            }
 
         }
 
@@ -30,6 +34,13 @@ public class Main {
         System.out.println("4. Find top performing student");
         System.out.println("5. Exit");
     }
+    private static void AddStudent() {}
+    //-------------------------------------------------------------------------
+    private static void DisplayAllStudents(){}
+    //-------------------------------------------------------------------------
+    private static void CalculateStudentAverage(){}
+    //-------------------------------------------------------------------------
+
     public static void main(String[] args) throws IOException {
         String path = args[0];
         scanner = new Scanner(new File(path));
