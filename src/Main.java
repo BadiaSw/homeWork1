@@ -4,30 +4,30 @@ import java.util.*;
 
 public class Main {
     public static Scanner scanner; // Note: Do not change this line.
-    static final int MAX_STUDENTS=100;
+    static final int MAX_STUDENTS = 100;
     static Map<String, ArrayList<Double>> students;
 
     public static void manageGrades() {
-         students=new HashMap<>();
+        students = new HashMap<>();
 
 
         System.out.println("Welcome to the Students Grade Management System!");
-        while (true){
+        while (true) {
             PrintMenu();
             System.out.println("Please enter your choice: ");
-            int choice=scanner.nextInt();
+            int choice = scanner.nextInt();
             scanner.nextLine();
-            switch (choice){
+            switch (choice) {
                 case 1:
                     AddStudent();
-                 break;
+                    break;
                 case 2:
                     DisplayAllStudents();
                     break;
-                case 3 :
+                case 3:
                     CalculateStudentAverage();
                     break;
-                case 4 :
+                case 4:
                     FindTopStudent();
                     break;
                 case 5:
@@ -39,45 +39,45 @@ public class Main {
         }
 
 
-
-
     }
+
     //menu func
-    private static void PrintMenu(){
+    private static void PrintMenu() {
         System.out.println("1. Add a new student");
         System.out.println("2. Display all students");
         System.out.println("3. Calculate a student's average grade");
         System.out.println("4. Find top performing student");
         System.out.println("5. Exit");
     }
+
     private static void AddStudent() {
-        if(students.size()>=MAX_STUDENTS){
+        if (students.size() >= MAX_STUDENTS) {
             System.out.println("Student limit reached");
             return;
         }
         System.out.println("Enter student name: ");
-        String studentName=scanner.nextLine();
+        String studentName = scanner.nextLine();
         System.out.println("Enter student grades: ");
-        String[] studentGrades=scanner.nextLine().split(" ");
-        ArrayList<Double> grades=new ArrayList<>();
-        for(String grade:studentGrades){
-            double gradeValue=Double.parseDouble(grade);
-            if(gradeValue<0||gradeValue>100){
+        String[] studentGrades = scanner.nextLine().split(" ");
+        ArrayList<Double> grades = new ArrayList<>();
+        for (String grade : studentGrades) {
+            double gradeValue = Double.parseDouble(grade);
+            if (gradeValue < 0 || gradeValue > 100) {
                 System.out.println("Invalid grades");
                 return;
 
             }
             grades.add(gradeValue);
-            students.put(studentName,grades);
-            System.out.println("Student "+studentName+"added successfully!");
-
         }
-
-
-
-
-
+        students.put(studentName, grades);
+        System.out.println("Student " + studentName + " added successfully");
     }
+
+
+
+
+
+
     //-------------------------------------------------------------------------
     private static void DisplayAllStudents(){}
     //-------------------------------------------------------------------------
