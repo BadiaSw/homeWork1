@@ -72,14 +72,25 @@ public class Main {
         students.put(studentName, grades);
         System.out.println("Student " + studentName + " added successfully");
     }
-
-
-
-
-
-
     //-------------------------------------------------------------------------
-    private static void DisplayAllStudents(){}
+    private static void DisplayAllStudents(){
+        if(students.isEmpty()){
+            System.out.println("No students records available");
+            return;
+        }
+        for (Map.Entry<String, ArrayList<Double>> entry : students.entrySet()) {
+
+
+            System.out.println("Name: " + entry.getKey()+"Grades: ");
+            for (int i = 0; i < entry.getValue().size(); i++) {
+                System.out.print(entry.getValue().get(i) + " ");
+                if (i < entry.getValue().size() - 1) {
+                    System.out.print(", ");
+                }
+            }
+            System.out.println();
+            }
+        }
     //-------------------------------------------------------------------------
     private static void CalculateStudentAverage(){}
     //-------------------------------------------------------------------------
