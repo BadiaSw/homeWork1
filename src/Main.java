@@ -92,7 +92,13 @@ public class Main {
             }
         }
     //-------------------------------------------------------------------------
-    private static void CalculateStudentAverage(){}
+    private static void CalculateStudentAverage(){
+        
+
+
+
+
+    }
     //-------------------------------------------------------------------------
     private static void FindTopStudent(){}
     public static void main(String[] args) throws IOException {
