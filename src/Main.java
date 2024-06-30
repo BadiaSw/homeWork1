@@ -110,9 +110,7 @@ public class Main {
              }
              double average = sum / averageGrades.size();
              System.out.printf("Average grade for %s:%.2f%n", studentName, average);
-
-
-
+             
              }
 
     }
