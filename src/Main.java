@@ -93,13 +93,38 @@ public class Main {
         }
     //-------------------------------------------------------------------------
     private static void CalculateStudentAverage(){
+         System.out.println("Enter student name: ");
+         String studentName = scanner.nextLine();
+         if (!students.containsKey(studentName)) {
+             System.out.println("No student found with name " + studentName);
+             return;
+         }
+         ArrayList<Double> averageGrades = students.get(studentName);
+         if(averageGrades.isEmpty()){
+             System.out.printf("Average grade for %s:0.00%n", studentName);
+         }
+         else{
+             double sum = 0.0;
+             
 
+
+
+
+         }
 
 
 
     }
     //-------------------------------------------------------------------------
-    private static void FindTopStudent(){}
+    private static void FindTopStudent(){
+
+
+
+
+
+
+
+    }
     public static void main(String[] args) throws IOException {
         String path = args[0];
         scanner = new Scanner(new File(path));
