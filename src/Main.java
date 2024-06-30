@@ -6,7 +6,6 @@ public class Main {
     public static Scanner scanner; // Note: Do not change this line.
     static final int MAX_STUDENTS = 100;
     static Map<String, ArrayList<Double>> students;
-
     public static void manageGrades() {
         students = new HashMap<>();
 
@@ -81,7 +80,7 @@ public class Main {
         for (Map.Entry<String, ArrayList<Double>> entry : students.entrySet()) {
 
 
-            System.out.println("Name: " + entry.getKey()+"Grades: ");
+            System.out.print("Name: " + entry.getKey()+", Grades: ");
             for (int i = 0; i < entry.getValue().size(); i++) {
                 System.out.print(entry.getValue().get(i) + " ");
                 if (i < entry.getValue().size() - 1) {
@@ -136,10 +135,8 @@ public class Main {
                 TopStudent = Name;
                 highestAverage = average;
             }
-
-
         }
-
+          System.out.printf("Top performing student: %s with an average grade of:%.2f%n", TopStudent, highestAverage);
 
 
 
@@ -149,7 +146,7 @@ public class Main {
 
     }
     public static void main(String[] args) throws IOException {
-        String path = args[0];
+        String path = "C:\\Users\\badea\\Downloads\\hw1(2)\\HW1_input.txt";
         scanner = new Scanner(new File(path));
         int numberOfTests = scanner.nextInt();
         scanner.nextLine();
