@@ -105,14 +105,15 @@ public class Main {
          }
          else{
              double sum = 0.0;
-             
+             for (Double grade : averageGrades) {
+                 sum += grade;
+             }
+             double average = sum / averageGrades.size();
+             System.out.printf("Average grade for %s:%.2f%n", studentName, average);
 
 
 
-
-         }
-
-
+             }
 
     }
     //-------------------------------------------------------------------------
