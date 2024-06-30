@@ -114,7 +114,32 @@ public class Main {
              }
     }
     //-------------------------------------------------------------------------
+    // Building a func just like the calculateStudentAverage just making it return the value
+    private static double StudentAverage(String Name){
+        List<Double> grades=students.get(Name);
+        double sum = 0.0;
+        for (Double grade : grades) {
+            sum += grade;
+        }
+        return sum / grades.size();
+    }
     private static void FindTopStudent(){
+        if(students.isEmpty()){
+            System.out.println("No students records available");
+            return;
+        }
+        String TopStudent=null;
+        double highestAverage =0.0;
+        for(String Name:students.keySet()){
+            double average = StudentAverage(Name);
+            if(average > highestAverage){
+                TopStudent = Name;
+                highestAverage = average;
+            }
+
+
+        }
+
 
 
 
