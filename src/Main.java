@@ -137,9 +137,9 @@ public class Main {
             }
             String TopStudent = null; // defining a top student
             double highestAverage = 0.0; // declaring his average
-            for (String Name : students.keySet()) {
-                double average = StudentAverage(Name);
-                if (average > highestAverage) {
+            for (String Name : students.keySet()) { // A loop on every student in the system
+                double average = StudentAverage(Name);// calling for the average func on every student name in the system
+                if (average > highestAverage) { // if the student average is higher saving it and his name till we get the highest one
                     TopStudent = Name;
                     highestAverage = average;
                 }
