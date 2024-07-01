@@ -16,7 +16,7 @@ public class Main {
             PrintMenu();
             System.out.println("Please enter your choice: ");
             int choice = scanner.nextInt();
-            if (scanner.hasNextInt()) {
+            if (scanner.hasNext()) {
                 scanner.nextLine();}
             switch (choice) {
                 case 1:
