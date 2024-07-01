@@ -40,7 +40,7 @@ public class Main {
         }
 
     }
-        //menu func
+        // Printing Thr Menu func
         private static void PrintMenu() {
             System.out.println("1. Add a new student");
             System.out.println("2. Display all students");
@@ -55,13 +55,13 @@ public class Main {
                 return;
             }
 
-            System.out.println("Enter student name: ");
-            String studentName = scanner.nextLine();
+            System.out.println("Enter student name:");
+            String studentName = scanner.nextLine().trim();
             System.out.println("Enter student grades:");
-            String[] studentGrades = scanner.nextLine().split(" ");
+            String[] studentGrades = scanner.nextLine().trim().split(" ");
             ArrayList<Double> grades = new ArrayList<>();
             for (String grade : studentGrades) {
-                Double gradeValue = Double.parseDouble(grade);
+                double gradeValue = Double.parseDouble(grade);
                 if (gradeValue < 0 || gradeValue > 100) {
                     System.out.println("Invalid grades");
                     return;
